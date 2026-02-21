@@ -1206,14 +1206,15 @@ a.service-item { display: block; cursor: pointer; }
   border: 1px solid var(--border-cream);
   height: 240px;
 }
-.contacts-map iframe {
+.contacts-map a { display: block; width: 100%; height: 100%; }
+.contacts-map img {
   width: 100%;
   height: 100%;
-  border: none;
+  object-fit: cover;
   filter: saturate(0.3) contrast(1.05) brightness(1.05);
   transition: filter 0.4s;
 }
-.contacts-map:hover iframe {
+.contacts-map:hover img {
   filter: saturate(0.7) contrast(1.02) brightness(1.02);
 }
 
@@ -1924,7 +1925,9 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
       </div>
 
       <div class="contacts-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1456.8!2d25.7166!3d66.5039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x442b4b45b0769b4b%3A0x7f26af4e32cc4e0b!2sKansankatu%2010%2C%2096100%20Rovaniemi%2C%20Finland!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="https://www.google.com/maps/search/Wherever+Mini+Hostel+Kansankatu+10+Rovaniemi" target="_blank">
+          <img src="images/map.png" alt="Wherever Mini Hostel on Google Maps">
+        </a>
       </div>
 
     </div>
@@ -2200,11 +2203,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 
 </script>
 
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies for Google Maps. <a onclick="document.getElementById('privacyOverlay').classList.add('open')">Privacy Policy</a></p>
-  <button class="cookie-banner-btn cookie-accept" onclick="document.getElementById('cookieBanner').classList.remove('visible');localStorage.setItem('cookies_accepted','1')">Accept</button>
-</div>
+
 
 <!-- PRIVACY POLICY MODAL -->
 <div class="privacy-overlay" id="privacyOverlay" onclick="if(event.target===this)this.classList.remove('open')">
@@ -2219,10 +2218,11 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <p>This website does not collect personal data through forms or account registration. We do not use analytics or tracking tools.</p>
 
     <h3>Cookies</h3>
-    <p>This site uses a Google Maps embed which may set third-party cookies to function properly. No first-party cookies are used for tracking or advertising purposes.</p>
+    <p>This website uses Google Analytics to understand how visitors interact with the site. Google Analytics may set cookies for this purpose. No first-party cookies are used for tracking or advertising purposes.</p>
 
     <h3>Third-Party Services</h3>
-    <p>Google Maps — embedded map for directions. Google's privacy policy applies to their services.<br>
+    <p>Google Analytics — used to understand site traffic. Google's privacy policy applies.<br>
+    Google Maps — external link only, opens in a new tab.<br>
     Booking.com — external link only, no data shared from this site.<br>
     WhatsApp / LINE — external messaging links, governed by their respective privacy policies.</p>
 
@@ -2237,9 +2237,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 </div>
 
 <script>
-  if (!localStorage.getItem('cookies_accepted')) {
-    setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1500);
-  }
+
 </script>
 
 </body>
