@@ -17,7 +17,7 @@
 <meta property="og:title" content="Wherever Mini Hostel — Rovaniemi, Lapland">
 <meta property="og:description" content="A boutique art hostel at the Arctic Circle. Northern Lights tours, Korouma Canyon excursions, and cozy rooms in the heart of Rovaniemi.">
 <meta property="og:url" content="https://whereverhostel.com/">
-<meta property="og:image" content="https://whereverhostel.com/images/hero.jpg">
+<meta property="og:image" content="https://whereverhostel.com/hero.jpg">
 <meta property="og:site_name" content="Wherever Mini Hostel">
 <meta property="og:locale" content="en_US">
 
@@ -25,7 +25,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wherever Mini Hostel — Rovaniemi, Lapland">
 <meta name="twitter:description" content="Boutique art hostel at the Arctic Circle. Aurora tours, Korouma Canyon, cozy rooms.">
-<meta name="twitter:image" content="https://whereverhostel.com/images/hero.jpg">
+<meta name="twitter:image" content="https://whereverhostel.com/hero.jpg">
 
 <!-- Structured Data (JSON-LD) -->
 <script type="application/ld+json">
@@ -50,7 +50,7 @@
     "latitude": 66.5039,
     "longitude": 25.7166
   },
-  "image": "https://whereverhostel.com/images/hero.jpg",
+  "image": "https://whereverhostel.com/hero.jpg",
   "priceRange": "€",
   "starRating": {
     "@type": "Rating",
@@ -147,6 +147,7 @@ body {
   justify-content: center;
   padding: 12px 32px;
   border: 1px solid var(--border);
+  border-radius: 40px;
   background: rgba(30,18,40,0.3);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -329,6 +330,12 @@ body {
   color: var(--cream);
 }
 .services-headline em { font-style: italic; }
+.services-description {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13px; line-height: 1.7;
+  color: rgba(245,238,242,0.55);
+  max-width: 440px; margin-top: 14px;
+}
 
 .services-category {
   font-family: 'Instrument Sans', sans-serif;
@@ -1475,11 +1482,10 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 <div class="nav-wrapper" id="navWrapper">
   <nav class="nav-bar">
     <ul class="nav-links">
-      <a href="#about">About</a>
       <a href="#rooms">Rooms</a>
       <a href="#experience">Experience</a>
       <a href="#contacts">Contacts</a>
-      <a href="#rooms">Book a Stay</a>
+      <a href="https://wa.me/358407250551" target="_blank">Book a Stay</a>
     </ul>
   </nav>
 </div>
@@ -1487,7 +1493,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 <!-- ══════ HERO ══════ -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="images/hero.jpg" alt="Wherever Hostel">
+    <img src="hero.jpg" alt="Wherever Hostel">
   </div>
   <div class="hero-gradient"></div>
   <div class="hero-center">
@@ -1496,7 +1502,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
       <span class="logo-hostel">Hostel</span>
     </h1>
     <a href="https://wa.me/358407250551" target="_blank" class="hero-btn">Book Your Stay</a>
-    <div class="hero-scroll" onclick="document.querySelector('.statement-section').scrollIntoView({behavior:'smooth'})">
+    <div class="hero-scroll" onclick="document.querySelector('.services-section').scrollIntoView({behavior:'smooth'})">
       <div class="hero-scroll-line"></div>
       <span class="hero-scroll-arrow">
         <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1507,15 +1513,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   </div>
 </section>
 
-<!-- ══════ STATEMENT ══════ -->
-<section class="statement-section reveal">
-  <span class="floating-star" data-speed="0.3" data-rotate="1" style="top: 20%; left: 6%;">❄︎</span>
-  <span class="floating-star light" data-speed="-0.2" data-rotate="-1" style="top: 60%; right: 8%; font-size: 12px;">❄︎</span>
-  <span class="floating-star deep" data-speed="0.15" data-rotate="0.5" style="bottom: 15%; left: 12%; font-size: 24px;">❄︎</span>
-  <p class="statement-text">
-    We are a quiet <em>mini-hostel</em> in the city center, close to all transport and attractions.<br>Stay comfortably and explore Lapland with our small-group aurora tours and hikes.
-  </p>
-</section>
+
 
 <!-- ══════ SERVICES — Editorial Gallery ══════ -->
 <section class="services-section reveal" id="experience">
@@ -1527,6 +1525,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div>
       <p class="services-featured-label">(WHAT WE) <span>offer</span></p>
       <h2 class="services-headline">Our <em>Experiences</em></h2>
+      <p class="services-description">We are a quiet mini-hostel in the city center, close to all transport and attractions. Stay comfortably and explore Lapland with our small-group aurora tours and hikes.</p>
     </div>
     <p class="services-category">( Wherever Mini Hostel )</p>
   </div>
@@ -1535,7 +1534,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <a href="#aurora" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>01</span></div>
       <div class="service-img-frame">
-        <img src="images/service-1.jpg" alt="Aurora Tours">
+        <img src="service-1.jpg" alt="Aurora Tours">
       </div>
       <div class="service-number-bottom"><span>(AURORA)</span><span><em>tours</em></span></div>
     </a>
@@ -1543,7 +1542,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="service-item">
       <div class="service-number-top"><span>N°</span><span>02</span></div>
       <div class="service-img-frame">
-        <img src="images/service-2.webp" alt="Boutique Rooms">
+        <img src="service-2.webp" alt="Boutique Rooms">
       </div>
       <div class="service-number-bottom"><span>(ROOMS)</span><span><em>dormitory</em></span></div>
     </div>
@@ -1551,7 +1550,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <a href="#korouma" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>03</span></div>
       <div class="service-img-frame">
-        <img src="images/service-3.jpg" alt="Korouma Canyon and Riisitunturi">
+        <img src="service-3.jpg" alt="Korouma Canyon and Riisitunturi">
       </div>
       <div class="service-number-bottom"><span>(EXCURSION)</span><span><em>Korouma Canyon & Riisitunturi</em></span></div>
     </a>
@@ -1559,7 +1558,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="service-item">
       <div class="service-number-top"><span>N°</span><span>04</span></div>
       <div class="service-img-frame">
-        <img src="images/service-4.png" alt="ROWWA Rovaniemi Guide">
+        <img src="service-4.png" alt="ROWWA Rovaniemi Guide">
       </div>
       <div class="service-number-bottom"><span>(ROWWA)</span><span><em>guide</em></span></div>
     </div>
@@ -1570,54 +1569,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <p class="services-bottom-label">( Rovaniemi · Lapland )</p>
   </div>
 
-</section>
-
-<!-- ══════════════════════════════════════
-   ABOUT — SCROLL-DRIVEN EDITORIAL
-   Images slide left→out / right→in on scroll
-   ══════════════════════════════════════ -->
-<section class="about-scroll" id="about">
-  <div class="about-sticky">
-    <!-- Image slides -->
-    <div class="about-images">
-      <div class="about-img-slide" data-slide="0">
-        <img src="images/about-1.jpg" alt="Hostel lounge">
-      </div>
-      <div class="about-img-slide" data-slide="1">
-        <img src="images/about-2.jpg" alt="Arctic mountains night">
-      </div>
-      <div class="about-img-slide" data-slide="2">
-        <img src="images/about-3.jpg" alt="Nordic travel">
-      </div>
-      <div class="about-img-slide" data-slide="3">
-        <img src="images/about-4.jpg" alt="Cozy warmth">
-      </div>
-    </div>
-
-    <div class="about-overlay"></div>
-
-    <!-- Editorial text -->
-    <div class="about-text-layer">
-      <div class="about-editorial">
-        <p class="about-editorial-text">
-          WELCOME TO <em>WHEREVER</em> MINI HOSTEL, WHERE WE CREATE A HOME FOR THE <em>BEAUTIFULLY RESTLESS</em> — THOUSANDS OF VOGUE MAGAZINES, ARCTIC LIGHT, AND <em>HOSPITALITY</em> THAT TRANSCENDS TIME
-        </p>
-      </div>
-    </div>
-
-    <!-- Progress dots -->
-    <div class="about-progress">
-      <div class="about-dot active" data-dot="0"></div>
-      <div class="about-dot" data-dot="1"></div>
-      <div class="about-dot" data-dot="2"></div>
-      <div class="about-dot" data-dot="3"></div>
-    </div>
-
-    <!-- Counter -->
-    <div class="about-counter">
-      <span class="current">01</span> / 04
-    </div>
-  </div>
 </section>
 
 <!-- ══════ ROOMS — Editorial Gallery ══════ -->
@@ -1638,7 +1589,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="room-item reveal">
       <div class="room-number-top"><span>N°</span><span>01</span></div>
       <div class="room-img-frame">
-        <img src="images/room-1.jpg" alt="Cozy beds">
+        <img src="room-1.jpg" alt="Cozy beds">
       </div>
       <div class="room-number-bottom"><span>N°</span><span>01</span></div>
     </div>
@@ -1646,7 +1597,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="room-item reveal">
       <div class="room-number-top"><span>N°</span><span>02</span></div>
       <div class="room-img-frame">
-        <img src="images/room-2.jpg" alt="Room details">
+        <img src="room-2.jpg" alt="Room details">
       </div>
       <div class="room-number-bottom"><span>N°</span><span>02</span></div>
     </div>
@@ -1654,7 +1605,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="room-item reveal">
       <div class="room-number-top"><span>N°</span><span>03</span></div>
       <div class="room-img-frame">
-        <img src="images/room-3.jpg" alt="Reading corner">
+        <img src="room-3.jpg" alt="Reading corner">
       </div>
       <div class="room-number-bottom"><span>N°</span><span>03</span></div>
     </div>
@@ -1662,7 +1613,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="room-item reveal">
       <div class="room-number-top"><span>N°</span><span>04</span></div>
       <div class="room-img-frame">
-        <img src="images/room-4.jpg" alt="Warm linens">
+        <img src="room-4.jpg" alt="Warm linens">
       </div>
       <div class="room-number-bottom"><span>N°</span><span>04</span></div>
     </div>
@@ -1799,7 +1750,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 
     <a href="https://wa.me/358407250551" target="_blank" class="tour-card" id="aurora" onclick="gtag('event','click_whatsapp',{'button':'book_aurora_tour'})">
       <div class="tour-card-img">
-        <img src="images/aurora.jpg" alt="Aurora Borealis">
+        <img src="aurora.jpg" alt="Aurora Borealis">
         <div class="tour-card-number"><span>N°</span><span>01</span></div>
       </div>
       <div class="tour-card-body">
@@ -1814,7 +1765,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 
     <a href="https://wa.me/358407250551" target="_blank" class="tour-card" id="korouma" onclick="gtag('event','click_whatsapp',{'button':'book_korouma_tour'})">
       <div class="tour-card-img">
-        <img src="images/service-3.jpg" alt="Korouma Canyon and Riisitunturi">
+        <img src="service-3.jpg" alt="Korouma Canyon and Riisitunturi">
         <div class="tour-card-number"><span>N°</span><span>02</span></div>
       </div>
       <div class="tour-card-body">
@@ -1904,13 +1855,9 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
           <p class="contacts-col-label">Email</p>
           <a href="mailto:whereverhostel@gmail.com">whereverhostel@gmail.com</a>
           <br><br>
-          <p class="contacts-col-label">Follow Us</p>
-          <div class="contacts-socials">
-            <a href="https://www.instagram.com/whereverhostel" target="_blank" onclick="gtag('event','click_social',{'platform':'instagram'})">Instagram</a>
-          </div>
-          <br>
           <p class="contacts-col-label">Contact Us</p>
           <div class="contacts-socials">
+            <a href="https://www.instagram.com/whereverhostel" target="_blank" onclick="gtag('event','click_social',{'platform':'instagram'})">Instagram</a>
             <a href="https://wa.me/358407250551" target="_blank">WhatsApp</a>
             <a href="https://line.me/ti/p/zAL5X9oQPa" target="_blank" onclick="gtag('event','click_social',{'platform':'line'})">LINE</a>
           </div>
@@ -1919,7 +1866,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 
       <div class="contacts-map">
         <a href="https://www.google.com/maps/search/Wherever+Mini+Hostel+Kansankatu+10+Rovaniemi" target="_blank">
-          <img src="images/map.png" alt="Wherever Mini Hostel on Google Maps">
+          <img src="map.png" alt="Wherever Mini Hostel on Google Maps">
         </a>
       </div>
 
@@ -1952,13 +1899,12 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
-      <a href="#about">About</a>
       <a href="#rooms">Rooms</a>
       <a href="#experience">Experience</a>
       <a href="#aurora">Aurora Tours</a>
       <a href="#korouma">Korouma & Riisitunturi</a>
       <a href="#contacts">Contacts</a>
-      <a href="#rooms">Book a Stay</a>
+      <a href="https://wa.me/358407250551" target="_blank">Book a Stay</a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
@@ -2004,7 +1950,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   // ── Hero snap scroll ──
   let snapBusy = false;
   let atHero = true;
-  const statement = document.querySelector('.statement-section');
+  const statement = document.querySelector('.services-section');
   const snapTo = statement.offsetTop;
 
   function handleSnap() {
@@ -2012,7 +1958,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     const s = window.scrollY;
 
     if (atHero && s > heroH * 0.1) {
-      // Scrolling down from hero → snap to statement
+      // Scrolling down from hero → snap to services
       snapBusy = true;
       atHero = false;
       window.scrollTo({ top: snapTo, behavior: 'smooth' });
@@ -2028,92 +1974,18 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   window.addEventListener('scroll', handleSnap, { passive: true });
 
   // ── Smooth scroll ──
-  document.querySelectorAll('.nav-links a').forEach(a => {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
-      e.preventDefault();
       const t = document.querySelector(a.getAttribute('href'));
-      if (t) window.scrollTo({ top: t.offsetTop - 70, behavior: 'smooth' });
-    });
-  });
-
-  // ══════════════════════════════════════
-  // ABOUT — Scroll-driven image transitions
-  // Images slide OUT to the left, new ones IN from the right
-  // ══════════════════════════════════════
-  const aboutSection = document.querySelector('.about-scroll');
-  const slides = document.querySelectorAll('.about-img-slide');
-  const dots = document.querySelectorAll('.about-dot');
-  const counter = document.querySelector('.about-counter .current');
-  const totalSlides = slides.length;
-
-  // Set initial positions: first visible, rest off-screen right
-  slides.forEach((slide, i) => {
-    if (i === 0) {
-      slide.style.transform = 'translateX(0)';
-      slide.style.opacity = '1';
-    } else {
-      slide.style.transform = 'translateX(100%)';
-      slide.style.opacity = '1';
-    }
-  });
-
-  let lastActiveSlide = 0;
-
-  function updateAboutSlides() {
-    const rect = aboutSection.getBoundingClientRect();
-    const sectionHeight = aboutSection.offsetHeight;
-    const viewH = window.innerHeight;
-
-    // How far we've scrolled into the section (0 → 1)
-    const scrolled = Math.max(0, -rect.top);
-    const totalScroll = sectionHeight - viewH;
-    const progress = Math.min(Math.max(scrolled / totalScroll, 0), 1);
-
-    // Which slide should be active
-    const activeIndex = Math.min(Math.floor(progress * totalSlides), totalSlides - 1);
-    // Sub-progress within current slide transition (0 → 1)
-    const slideProgress = (progress * totalSlides) - Math.floor(progress * totalSlides);
-
-    slides.forEach((slide, i) => {
-      if (i < activeIndex) {
-        // Already passed — slid out to the left
-        slide.style.transform = 'translateX(-100%)';
-        slide.style.zIndex = i;
-      } else if (i === activeIndex) {
-        // Current slide — visible, maybe sliding out
-        if (activeIndex < totalSlides - 1) {
-          const moveOut = slideProgress * -100;
-          slide.style.transform = `translateX(${moveOut}%)`;
-        } else {
-          slide.style.transform = 'translateX(0)';
-        }
-        slide.style.zIndex = totalSlides;
-      } else if (i === activeIndex + 1) {
-        // Next slide — sliding in from right
-        const moveIn = (1 - slideProgress) * 100;
-        slide.style.transform = `translateX(${moveIn}%)`;
-        slide.style.zIndex = totalSlides - 1;
-      } else {
-        // Future slides — off-screen right
-        slide.style.transform = 'translateX(100%)';
-        slide.style.zIndex = i;
+      if (t) {
+        e.preventDefault();
+        snapBusy = true;
+        atHero = false;
+        window.scrollTo({ top: t.offsetTop, behavior: 'smooth' });
+        setTimeout(() => { snapBusy = false; }, 1500);
       }
     });
-
-    // Update dots
-    if (activeIndex !== lastActiveSlide) {
-      dots.forEach((dot, i) => dot.classList.toggle('active', i === activeIndex));
-      counter.textContent = String(activeIndex + 1).padStart(2, '0');
-      lastActiveSlide = activeIndex;
-    }
-  }
-
-  window.addEventListener('scroll', () => {
-    requestAnimationFrame(updateAboutSlides);
-  }, { passive: true });
-
-  // Initial call
-  updateAboutSlides();
+  });
 
   // ── Rating tabs ──
   document.querySelectorAll('.rating-tab').forEach(tab => {
@@ -2173,26 +2045,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
       hero.style.transform = `scale(1.05) translateY(${scroll * 0.15}px)`;
     }
   }, { passive: true });
-
-  // ══════════════════════════════════════
-  // STATEMENT — horizontal scroll effect
-  // ══════════════════════════════════════
-  const stmtText = document.querySelector('.statement-text');
-  const stmtSection = document.querySelector('.statement-section');
-
-  function updateStatementScroll() {
-    const rect = stmtSection.getBoundingClientRect();
-    const vh = window.innerHeight;
-    // progress: 0 = section just entering bottom, 0.5 = centered, 1 = leaving top
-    const progress = 1 - (rect.top + rect.height) / (vh + rect.height);
-    const clamped = Math.max(0, Math.min(1, progress));
-    // map 0→1 to translateX: +60% → 0% → -60%
-    const x = (0.5 - clamped) * 120;
-    stmtText.style.transform = `translateX(${x}%)`;
-  }
-
-  window.addEventListener('scroll', updateStatementScroll, { passive: true });
-  updateStatementScroll();
 
 </script>
 
