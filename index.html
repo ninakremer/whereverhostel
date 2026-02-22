@@ -239,13 +239,13 @@ body {
   text-decoration: none;
   color: var(--cream);
   background: transparent;
-  border: 1px solid var(--cream);
+  border: 1px solid rgba(245,238,242,0.2);
   border-radius: 40px;
   transition: all 0.35s ease;
 }
 .hero-btn:hover {
-  background: var(--cream);
-  color: var(--olive-deep);
+  border-color: rgba(245,238,242,0.6);
+  background: rgba(245,238,242,0.06);
 }
 
 /* Vintage scroll arrow */
@@ -299,8 +299,9 @@ body {
    ══════════════════════ */
 .services-section {
   padding: 100px 50px 80px;
-  background: var(--olive-dark);
+  background: var(--olive-deep);
   color: var(--cream);
+  position: relative;
 }
 
 .services-header {
@@ -577,7 +578,7 @@ a.service-item { display: block; cursor: pointer; }
    ROOMS — Editorial Gallery (Rienne Grae style)
    ══════════════════════ */
 .rooms-section {
-  padding: 100px 50px 80px;
+  padding: 80px 50px 2px;
   background: var(--cream-light);
   color: var(--text-dark);
 }
@@ -716,16 +717,16 @@ a.service-item { display: block; cursor: pointer; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 11px; font-weight: 500;
   letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--cream);
-  background: var(--olive);
-  border: 1px solid var(--olive);
+  color: var(--text-dark);
+  background: transparent;
+  border: 1px solid rgba(30,18,40,0.15);
   border-radius: 40px;
   transition: all 0.35s ease;
   text-decoration: none;
 }
 .rooms-price-tag:hover {
-  background: var(--olive-dark);
-  border-color: var(--olive-dark);
+  border-color: rgba(30,18,40,0.5);
+  background: rgba(30,18,40,0.04);
 }
 
 
@@ -734,7 +735,7 @@ a.service-item { display: block; cursor: pointer; }
    ══════════════════════ */
 .tours-section {
   padding: 100px 50px 80px;
-  background: var(--olive-dark);
+  background: var(--olive-deep);
   color: var(--cream);
   position: relative;
 }
@@ -834,9 +835,8 @@ a.service-item { display: block; cursor: pointer; }
   transition: all 0.3s;
 }
 .tour-card:hover .tour-card-btn {
-  background: var(--cream);
-  color: var(--olive-deep);
-  border-color: var(--cream);
+  border-color: rgba(245,238,242,0.6);
+  background: rgba(245,238,242,0.06);
 }
 
 @media (max-width: 900px) {
@@ -854,14 +854,23 @@ a.service-item { display: block; cursor: pointer; }
 /* ══════════════════════
    TESTIMONIALS
    ══════════════════════ */
-.testimonials-section { padding: 80px 50px; background: var(--cream-warm); }
-.testimonials-top { text-align: center; margin-bottom: 50px; }
+.testimonials-section { padding: 75px 50px; background: var(--cream-warm); }
+.testimonials-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials-right { text-align: right; }
 
 /* Rating tabs */
 .rating-tabs {
   display: inline-flex;
   gap: 0;
-  margin-top: 16px;
+  margin-top: 0;
   border: 1px solid var(--border-cream);
   border-radius: 40px;
   overflow: hidden;
@@ -956,30 +965,32 @@ a.service-item { display: block; cursor: pointer; }
    AMENITIES — Expandable grid
    ══════════════════════ */
 .amenities-section {
-  padding: 80px 50px;
-  background: var(--olive-dark);
-  color: var(--cream);
+  padding: 75px 50px;
+  background: var(--cream-light);
+  color: var(--text-dark);
 }
 
 .amenities-header {
   max-width: 1100px;
   margin: 0 auto 50px;
-  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .amenities-label {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 11px; font-weight: 500;
-  letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--sand);
-  margin-bottom: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
 
 .amenities-title {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 400; line-height: 1.1;
-  color: var(--cream);
+  color: var(--text-dark);
 }
 .amenities-title em { font-style: italic; }
 
@@ -993,7 +1004,7 @@ a.service-item { display: block; cursor: pointer; }
 
 .amenity-category {
   padding: 28px 24px;
-  border: 1px solid rgba(245,238,242,0.08);
+  border: 1px solid rgba(30,18,40,0.08);
   margin: -0.5px;
 }
 
@@ -1001,10 +1012,10 @@ a.service-item { display: block; cursor: pointer; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 10px; font-weight: 600;
   letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--accent-light);
+  color: var(--olive);
   margin-bottom: 16px;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(245,238,242,0.08);
+  border-bottom: 1px solid rgba(30,18,40,0.1);
 }
 
 .amenity-item {
@@ -1014,7 +1025,7 @@ a.service-item { display: block; cursor: pointer; }
   margin-bottom: 10px;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 13px;
-  color: var(--cream);
+  color: var(--text-dark);
   opacity: 0.7;
   line-height: 1.4;
   padding: 6px 10px;
@@ -1025,14 +1036,14 @@ a.service-item { display: block; cursor: pointer; }
 
 .amenity-item:hover {
   opacity: 1;
-  background: rgba(245,238,242,0.06);
+  background: rgba(30,18,40,0.05);
   padding-left: 16px;
 }
 
 .amenity-item::before {
   content: '❄︎';
   font-size: 8px;
-  color: var(--accent);
+  color: var(--olive);
   flex-shrink: 0;
   position: relative;
   top: 1px;
@@ -1041,12 +1052,12 @@ a.service-item { display: block; cursor: pointer; }
 
 .amenity-item:hover::before {
   transform: rotate(90deg) scale(1.3);
-  color: var(--accent-light);
+  color: var(--olive-deep);
 }
 
 .amenity-note {
   font-size: 10px;
-  color: var(--sand);
+  color: var(--text-muted);
   opacity: 0.6;
   margin-left: 16px;
   margin-top: -6px;
@@ -1081,17 +1092,16 @@ a.service-item { display: block; cursor: pointer; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 11px; font-weight: 500;
   letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--cream);
+  color: var(--text-dark);
   background: transparent;
-  border: 1px solid rgba(245,238,242,0.2);
+  border: 1px solid rgba(30,18,40,0.15);
   border-radius: 40px;
   cursor: pointer;
   transition: all 0.35s ease;
 }
 .amenities-toggle:hover {
-  background: var(--cream);
-  color: var(--olive-deep);
-  border-color: var(--cream);
+  border-color: rgba(30,18,40,0.5);
+  background: rgba(30,18,40,0.04);
 }
 
 /* ══════════════════════
@@ -1228,17 +1238,30 @@ a.service-item { display: block; cursor: pointer; }
 /* ══════════════════════
    CTA
    ══════════════════════ */
-.cta-section { padding: 100px 50px; text-align: center; background: var(--cream); }
-.cta-ornament { font-size: 16px; color: var(--sand); margin-bottom: 20px; letter-spacing: 16px; font-variant-emoji: text; }
+.cta-section { padding: 80px 50px; background: var(--cream); }
+.cta-header {
+  max-width: 1100px; margin: 0 auto 40px;
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.cta-label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--text-muted); margin-bottom: 8px;
+}
 .cta-headline {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(40px, 5vw, 68px); font-weight: 400;
-  line-height: 1.05; color: var(--text-dark); margin-bottom: 20px;
+  font-size: clamp(32px, 4vw, 48px); font-weight: 400;
+  line-height: 1.1; color: var(--text-dark);
 }
 .cta-headline em { font-style: italic; }
-.cta-subtext { font-size: 14px; color: var(--text-muted); max-width: 400px; margin: 0 auto 40px; line-height: 1.7; }
+.cta-body {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 40px;
+}
+.cta-subtext { font-size: 14px; color: var(--text-muted); max-width: 440px; line-height: 1.7; }
 .cta-buttons {
-  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  display: flex; gap: 16px; flex-wrap: wrap;
 }
 .cta-btn {
   display: inline-block; padding: 16px 40px;
@@ -1246,10 +1269,12 @@ a.service-item { display: block; cursor: pointer; }
   font-size: 12px; font-weight: 500;
   letter-spacing: 0.15em; text-transform: uppercase;
   text-decoration: none;
-  background: var(--olive-deep); color: var(--cream);
+  color: var(--text-dark);
+  background: transparent;
+  border: 1px solid rgba(30,18,40,0.15);
   border-radius: 40px; transition: all 0.35s ease;
 }
-.cta-btn:hover { background: var(--text-dark); transform: translateY(-2px); }
+.cta-btn:hover { border-color: rgba(30,18,40,0.5); background: rgba(30,18,40,0.04); }
 .cta-address {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
@@ -1261,18 +1286,24 @@ a.service-item { display: block; cursor: pointer; }
    ══════════════════════ */
 footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 40px; }
 .footer-inner {
-  display: grid; grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 40px; max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px; width: 100%;
 }
+.footer-brand { text-align: left; }
 .footer-brand-name { font-family: 'Cinzel', serif; font-size: 22px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 4px; }
 .footer-brand-name em { font-family: Arial, Helvetica, sans-serif; font-style: italic; }
 .footer-brand-sub { font-family: 'Pinyon Script', cursive; font-size: 26px; opacity: 0.8; margin-bottom: 16px; }
 .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(245,238,242,0.45); max-width: 280px; }
+.footer-col:nth-child(2) { text-align: center; }
+.footer-col:nth-child(2) a { display: block; }
+.footer-col:nth-child(3) { text-align: right; }
+.footer-col:nth-child(3) a { display: block; }
+.footer-col:nth-child(3) .footer-social { justify-content: flex-end; }
 .footer-col h4 {
   font-family: 'Instrument Sans', sans-serif; font-size: 10px; font-weight: 600;
   letter-spacing: 0.3em; text-transform: uppercase; color: var(--sand); margin-bottom: 20px;
 }
-.footer-col a { display: block; font-size: 13px; color: rgba(245,238,242,0.55); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
+.footer-col a { font-size: 13px; color: rgba(245,238,242,0.55); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
 .footer-col a:hover { color: var(--cream); }
 .footer-social { display: flex; gap: 14px; margin-top: 16px; }
 .footer-social a {
@@ -1283,7 +1314,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 .footer-social a:hover { border-color: var(--cream); background: rgba(245,238,242,0.06); }
 .footer-social svg { width: 15px; height: 15px; stroke: var(--cream); stroke-width: 1.5; fill: none; }
 .footer-bottom {
-  max-width: 1000px; margin: 40px auto 0; padding-top: 20px;
+  width: 100%; margin: 40px auto 0; padding-top: 20px;
   border-top: 1px solid rgba(245,238,242,0.06);
   display: flex; justify-content: space-between;
 }
@@ -1299,17 +1330,19 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   .nav-links a { font-size: 10px; }
   .hero-title { }
   .services-gallery { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .services-section { padding: 70px 30px; }
+  .services-section { padding: 70px 30px 60px; }
   .services-header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .services-bottom-row { flex-direction: row; gap: 8px; align-items: center; justify-content: space-between; }
   .rooms-gallery { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .rooms-section { padding: 70px 30px; }
+  .rooms-section { padding: 60px 30px 2px; }
   .rooms-header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .rooms-bottom-row { flex-direction: row; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
   .amenities-grid, .amenities-hidden { grid-template-columns: repeat(2, 1fr); }
   .amenities-section { padding: 60px 30px; }
   .testimonials-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-  .footer-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .footer-brand p { font-size: 11px; }
+  .footer-col a { font-size: 11px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .contacts-grid { grid-template-columns: 1fr; gap: 30px; }
   .contacts-frame { padding: 50px 30px 40px; }
@@ -1358,7 +1391,11 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   .statement-section { padding: 24px 20px; }
   .statement-text { font-size: 10px; white-space: normal; text-align: center; transform: none !important; }
   .testimonials-section { padding: 60px 24px; }
+  .testimonials-top { flex-direction: column; gap: 20px; }
+  .testimonials-right { text-align: left; }
   .cta-section { padding: 60px 24px; }
+  .cta-header { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .cta-body { flex-direction: column; align-items: flex-start; gap: 24px; }
   .contacts-section { padding: 40px 14px; }
   .contacts-frame { padding: 40px 20px 30px; }
   .contacts-giant-title { font-size: clamp(44px, 10vw, 80px); }
@@ -1370,13 +1407,20 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   .services-bottom-row { align-items: center; }
   .rooms-bottom-row { align-items: center; justify-content: space-between; }
   .amenities-grid, .amenities-hidden { grid-template-columns: repeat(2, 1fr); }
-  .amenities-section { padding: 40px 20px; }
+  .amenities-section { padding: 35px 20px; }
   .amenity-category { padding: 20px 16px; }
   .amenity-item { font-size: 12px; }
   .amenities-title { font-size: clamp(26px, 6vw, 36px); }
   .services-explore-btn { align-self: center; }
   .rooms-price-tag { align-self: auto; }
-  .cta-section { text-align: center; }
+  
+  footer { padding: 40px 20px 30px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  .footer-brand { text-align: center; }
+  .footer-brand p { max-width: 100%; }
+  .footer-col:nth-child(2) { text-align: center; }
+  .footer-col:nth-child(3) { text-align: center; }
+  .footer-col:nth-child(3) .footer-social { justify-content: center; }
 }
 
 /* ══════════════════════
@@ -1539,29 +1583,29 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
       <div class="service-number-bottom"><span>(AURORA)</span><span><em>tours</em></span></div>
     </a>
 
-    <div class="service-item">
+    <a href="#rooms" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>02</span></div>
       <div class="service-img-frame">
         <img src="service-2.webp" alt="Boutique Rooms">
       </div>
       <div class="service-number-bottom"><span>(ROOMS)</span><span><em>dormitory</em></span></div>
-    </div>
+    </a>
 
     <a href="#korouma" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>03</span></div>
       <div class="service-img-frame">
         <img src="service-3.jpg" alt="Korouma Canyon and Riisitunturi">
       </div>
-      <div class="service-number-bottom"><span>(EXCURSION)</span><span><em>Korouma Canyon & Riisitunturi</em></span></div>
+      <div class="service-number-bottom"><span>(EXCURSION)</span><span><em>Korouma Canyon & Riisitunturi National Park</em></span></div>
     </a>
 
-    <div class="service-item">
+    <a href="#contacts" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>04</span></div>
       <div class="service-img-frame">
         <img src="service-4.png" alt="ROWWA Rovaniemi Guide">
       </div>
       <div class="service-number-bottom"><span>(ROWWA)</span><span><em>guide</em></span></div>
-    </div>
+    </a>
   </div>
 
   <div class="services-bottom-row">
@@ -1628,9 +1672,11 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 </section>
 
 <!-- ══════ AMENITIES ══════ -->
-<section class="amenities-section reveal">
+<section class="amenities-section">
   <div class="amenities-header">
-    <p class="amenities-label">Everything you need</p>
+    <div>
+      <p class="amenities-label">( EVERYTHING YOU NEED )</p>
+    </div>
     <h2 class="amenities-title">Hostel <em>Amenities</em></h2>
   </div>
 
@@ -1684,6 +1730,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   <div class="amenities-grid amenities-hidden" id="amenitiesMore">
     <div class="amenity-category">
       <p class="amenity-category-title">Food & Drinks</p>
+      <div class="amenity-item">Complimentary Tea & Coffee</div>
       <div class="amenity-item">Grocery Delivery</div>
       <p class="amenity-note">Additional cost</p>
     </div>
@@ -1769,7 +1816,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
         <div class="tour-card-number"><span>N°</span><span>02</span></div>
       </div>
       <div class="tour-card-body">
-        <h3 class="tour-card-title">Visit<br><em>Korouma Canyon<br>& Riisitunturi</em></h3>
+        <h3 class="tour-card-title">Visit<br><em>Korouma Canyon<br>& Riisitunturi National Park</em></h3>
         <p class="tour-card-text">Visit two of Lapland's most iconic national parks, Korouma Canyon and Riisitunturi, in one day and save your travel time. This small-group tour runs from 8:00 to 16:30 and includes guiding, photos taken by us, and a warm meal with drinks, so you can simply enjoy the landscapes without any stress. Perfect for travellers who want frozen waterfalls, snowy forests, and the best Arctic scenery in one well-planned day.</p>
         <div class="tour-card-footer">
           <p class="services-bottom-label">(PRICE) <em>€180 per person</em></p>
@@ -1789,21 +1836,23 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   <div class="testimonials-top">
     <h2 class="testimonials-title">Guest <em>Stories</em></h2>
     
-    <div class="rating-tabs">
-      <button class="rating-tab active" data-tab="hostelworld">Hostelworld</button>
-      <button class="rating-tab" data-tab="booking">Booking.com</button>
-    </div>
+    <div class="testimonials-right">
+      <div class="rating-tabs">
+        <button class="rating-tab" data-tab="hostelworld">Hostelworld</button>
+        <button class="rating-tab active" data-tab="booking">Booking.com</button>
+      </div>
 
-    <div class="rating-content active" data-content="hostelworld">
-      <span class="rating-score">9.9</span>
-      <span class="rating-stars">★★★★★</span>
-      / 10 — 179 Reviews
-    </div>
+      <div class="rating-content" data-content="hostelworld">
+        <span class="rating-score">9.9</span>
+        <span class="rating-stars">★★★★★</span>
+        / 10 — 179 Reviews
+      </div>
 
-    <div class="rating-content" data-content="booking">
-      <span class="rating-score">9.0</span>
-      <span class="rating-stars">★★★★★</span>
-      / 10 — 772 Reviews
+      <div class="rating-content active" data-content="booking">
+        <span class="rating-score">9.0</span>
+        <span class="rating-stars">★★★★★</span>
+        / 10 — 772 Reviews
+      </div>
     </div>
   </div>
   <div class="testimonials-grid">
@@ -1879,14 +1928,22 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   <span class="floating-star light" data-speed="-0.25" data-rotate="0.8" style="top: 15%; right: 8%; font-size: 18px;">❄︎</span>
   <span class="floating-star" data-speed="0.2" data-rotate="-0.5" style="top: 55%; left: 6%; font-size: 14px;">❄︎</span>
   <span class="floating-star deep" data-speed="0.32" data-rotate="1.4" style="bottom: 18%; right: 5%; font-size: 10px;">❄︎</span>
-  <div class="cta-ornament reveal">❄︎ ❄︎ ❄︎</div>
-  <h2 class="cta-headline reveal">Begin your<br><em>Arctic story.</em></h2>
-  <p class="cta-subtext reveal">Your room at the edge of the world is waiting. Book directly for the best rates and a personal welcome from Alisa.</p>
-  <div class="cta-buttons">
-    <a href="https://www.booking.com/hotel/fi/wherever-hostel.ru.html?aid=356980&label=gog235jc-10CAsoSEIPd2hlcmV2ZXItaG9zdGVsSAxYA2hIiAEBmAEzuAEHyAEM2AED6AEB-AEBiAIBqAIBuALa4ObMBsACAdICJDRmZWRkOGFiLTA5M2YtNDkyMi04NDc3LWQ2NTU5NjcxMzJkZdgCAeACAQ&sid=3bc8c38e940389d1c182b321bbc88b3f&dist=0&keep_landing=1&sb_price_type=total&type=total&" target="_blank" class="cta-btn" onclick="gtag('event','click_booking',{'button':'cta_booking'})">Book on Booking.com</a>
-    <a href="https://wa.me/358407250551" target="_blank" class="cta-btn" onclick="gtag('event','click_whatsapp',{'button':'cta_book_direct'})">Book Direct — 5% Off</a>
+  
+  <div class="cta-header">
+    <div>
+      <p class="cta-label">( BOOK YOUR STAY )</p>
+      <h2 class="cta-headline reveal">Begin your <em>Arctic story.</em></h2>
+    </div>
+    <p class="cta-label">( Kansankatu 10 · Rovaniemi )</p>
   </div>
-  <p class="cta-address reveal">Kansankatu 10 · 96100 Rovaniemi · Lapland, Finland</p>
+
+  <div class="cta-body">
+    <p class="cta-subtext reveal">Your room at the edge of the world is waiting. Book directly for the best rates and a personal welcome from Alisa.</p>
+    <div class="cta-buttons">
+      <a href="https://www.booking.com/hotel/fi/wherever-hostel.ru.html?aid=356980&label=gog235jc-10CAsoSEIPd2hlcmV2ZXItaG9zdGVsSAxYA2hIiAEBmAEzuAEHyAEM2AED6AEB-AEBiAIBqAIBuALa4ObMBsACAdICJDRmZWRkOGFiLTA5M2YtNDkyMi04NDc3LWQ2NTU5NjcxMzJkZdgCAeACAQ&sid=3bc8c38e940389d1c182b321bbc88b3f&dist=0&keep_landing=1&sb_price_type=total&type=total&" target="_blank" class="cta-btn" onclick="gtag('event','click_booking',{'button':'cta_booking'})">Book on Booking.com</a>
+      <a href="https://wa.me/358407250551" target="_blank" class="cta-btn" onclick="gtag('event','click_whatsapp',{'button':'cta_book_direct'})">Book Direct — 5% Off</a>
+    </div>
+  </div>
 </section>
 
 <!-- ══════ FOOTER ══════ -->
@@ -1911,17 +1968,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
       <a href="tel:+358407250551">+358 40 725 0551</a>
       <a href="mailto:whereverhostel@gmail.com">whereverhostel@gmail.com</a>
       <a href="#">Kansankatu 10, Rovaniemi</a>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/whereverhostel" target="_blank" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-        </a>
-        <a href="https://wa.me/358407250551" target="_blank" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        </a>
-        <a href="https://line.me/ti/p/zAL5X9oQPa" target="_blank" aria-label="LINE">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 4.21 3.74 7.74 8.78 8.4.34.07.8.23.92.52.1.26.07.68.03.95l-.15.9c-.05.27-.2 1.07.94.58s6.26-3.69 8.54-6.32C22.72 13.64 22 12.13 22 10.5 22 5.82 17.52 2 12 2z"/></svg>
-        </a>
-      </div>
     </div>
   </div>
   <div class="footer-bottom">
