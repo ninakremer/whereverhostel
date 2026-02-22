@@ -461,7 +461,7 @@ a.service-item { display: block; cursor: pointer; }
    ══════════════════════ */
 .about-scroll {
   position: relative;
-  height: 300vh; /* 3 screens of scroll = 3 image transitions */
+  height: 300vh;
 }
 
 .about-sticky {
@@ -472,7 +472,6 @@ a.service-item { display: block; cursor: pointer; }
   overflow: hidden;
 }
 
-/* Image carousel layer */
 .about-images {
   position: absolute;
   inset: 0;
@@ -485,7 +484,7 @@ a.service-item { display: block; cursor: pointer; }
   width: 100%;
   height: 100%;
   will-change: transform, opacity;
-  transition: none; /* JS drives transforms */
+  transition: none;
 }
 
 .about-img-slide img {
@@ -495,7 +494,6 @@ a.service-item { display: block; cursor: pointer; }
   filter: brightness(0.4) saturate(0.6) contrast(1.1);
 }
 
-/* Overlay for text readability */
 .about-overlay {
   position: absolute;
   inset: 0;
@@ -503,7 +501,6 @@ a.service-item { display: block; cursor: pointer; }
   background: rgba(30,18,40,0.3);
 }
 
-/* Text layer */
 .about-text-layer {
   position: absolute;
   inset: 0;
@@ -535,7 +532,6 @@ a.service-item { display: block; cursor: pointer; }
   text-transform: none;
 }
 
-/* Scroll progress indicator */
 .about-progress {
   position: absolute;
   bottom: 40px;
@@ -558,7 +554,6 @@ a.service-item { display: block; cursor: pointer; }
   border-radius: 4px;
 }
 
-/* Image counter */
 .about-counter {
   position: absolute;
   bottom: 40px;
@@ -575,7 +570,7 @@ a.service-item { display: block; cursor: pointer; }
 }
 
 /* ══════════════════════
-   ROOMS — Editorial Gallery (Rienne Grae style)
+   ROOMS — Editorial Gallery
    ══════════════════════ */
 .rooms-section {
   padding: 80px 50px 2px;
@@ -620,7 +615,6 @@ a.service-item { display: block; cursor: pointer; }
   color: var(--text-muted);
 }
 
-/* Gallery grid */
 .rooms-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -633,7 +627,6 @@ a.service-item { display: block; cursor: pointer; }
   position: relative;
 }
 
-/* Number labels */
 .room-number-top {
   display: flex;
   justify-content: space-between;
@@ -664,7 +657,6 @@ a.service-item { display: block; cursor: pointer; }
   opacity: 0.7;
 }
 
-/* Image container with rounded corners */
 .room-img-frame {
   width: 100%;
   aspect-ratio: 1 / 1.15;
@@ -687,7 +679,6 @@ a.service-item { display: block; cursor: pointer; }
   transform: scale(1.05);
 }
 
-/* Bottom info row */
 .rooms-bottom-row {
   max-width: 1100px;
   margin: 50px auto 0;
@@ -728,7 +719,6 @@ a.service-item { display: block; cursor: pointer; }
   border-color: rgba(30,18,40,0.5);
   background: rgba(30,18,40,0.04);
 }
-
 
 /* ══════════════════════
    TOURS — Two-column cards
@@ -866,7 +856,6 @@ a.service-item { display: block; cursor: pointer; }
 }
 .testimonials-right { text-align: right; }
 
-/* Rating tabs */
 .rating-tabs {
   display: inline-flex;
   gap: 0;
@@ -962,7 +951,7 @@ a.service-item { display: block; cursor: pointer; }
 }
 
 /* ══════════════════════
-   AMENITIES — Expandable grid
+   AMENITIES
    ══════════════════════ */
 .amenities-section {
   padding: 75px 50px;
@@ -1065,7 +1054,6 @@ a.service-item { display: block; cursor: pointer; }
   font-style: italic;
 }
 
-/* Hidden amenities */
 .amenities-hidden {
   display: none;
 }
@@ -1079,7 +1067,6 @@ a.service-item { display: block; cursor: pointer; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Toggle button */
 .amenities-toggle-wrap {
   max-width: 1100px;
   margin: 30px auto 0;
@@ -1105,7 +1092,7 @@ a.service-item { display: block; cursor: pointer; }
 }
 
 /* ══════════════════════
-   CONTACTS — Dieu Neo editorial style
+   CONTACTS
    ══════════════════════ */
 .contacts-section {
   padding: 80px 50px 100px;
@@ -1164,8 +1151,6 @@ a.service-item { display: block; cursor: pointer; }
   gap: 50px;
 }
 
-.contacts-col {}
-
 .contacts-col-label {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 10px; font-weight: 600;
@@ -1215,7 +1200,6 @@ a.service-item { display: block; cursor: pointer; }
   border-color: var(--olive-deep);
 }
 
-/* Mini map */
 .contacts-map {
   margin-top: 40px;
   border-radius: 12px;
@@ -1223,16 +1207,15 @@ a.service-item { display: block; cursor: pointer; }
   border: 1px solid var(--border-cream);
   height: 240px;
 }
-.contacts-map a { display: block; width: 100%; height: 100%; }
-.contacts-map img {
+.contacts-map iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: saturate(0.3) contrast(1.05) brightness(1.05);
+  display: block;
+  filter: saturate(0.4) contrast(1.05) brightness(1.05);
   transition: filter 0.4s;
 }
-.contacts-map:hover img {
-  filter: saturate(0.7) contrast(1.02) brightness(1.02);
+.contacts-map:hover iframe {
+  filter: saturate(0.8) contrast(1.02) brightness(1.02);
 }
 
 /* ══════════════════════
@@ -1275,11 +1258,6 @@ a.service-item { display: block; cursor: pointer; }
   border-radius: 40px; transition: all 0.35s ease;
 }
 .cta-btn:hover { border-color: rgba(30,18,40,0.5); background: rgba(30,18,40,0.04); }
-.cta-address {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--text-muted); margin-top: 40px;
-}
 
 /* ══════════════════════
    FOOTER
@@ -1291,28 +1269,18 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 }
 .footer-brand { text-align: left; }
 .footer-brand-name { font-family: 'Cinzel', serif; font-size: 22px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 4px; }
-.footer-brand-name em { font-family: Arial, Helvetica, sans-serif; font-style: italic; }
 .footer-brand-sub { font-family: 'Pinyon Script', cursive; font-size: 26px; opacity: 0.8; margin-bottom: 16px; }
 .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(245,238,242,0.45); max-width: 280px; }
 .footer-col:nth-child(2) { text-align: center; }
 .footer-col:nth-child(2) a { display: block; }
 .footer-col:nth-child(3) { text-align: right; }
 .footer-col:nth-child(3) a { display: block; }
-.footer-col:nth-child(3) .footer-social { justify-content: flex-end; }
 .footer-col h4 {
   font-family: 'Instrument Sans', sans-serif; font-size: 10px; font-weight: 600;
   letter-spacing: 0.3em; text-transform: uppercase; color: var(--sand); margin-bottom: 20px;
 }
 .footer-col a { font-size: 13px; color: rgba(245,238,242,0.55); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
 .footer-col a:hover { color: var(--cream); }
-.footer-social { display: flex; gap: 14px; margin-top: 16px; }
-.footer-social a {
-  width: 34px; height: 34px;
-  border: 1px solid rgba(245,238,242,0.12); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; transition: all 0.3s;
-}
-.footer-social a:hover { border-color: var(--cream); background: rgba(245,238,242,0.06); }
-.footer-social svg { width: 15px; height: 15px; stroke: var(--cream); stroke-width: 1.5; fill: none; }
 .footer-bottom {
   width: 100%; margin: 40px auto 0; padding-top: 20px;
   border-top: 1px solid rgba(245,238,242,0.06);
@@ -1328,7 +1296,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 @media (max-width: 900px) {
   .nav-links { gap: 20px; }
   .nav-links a { font-size: 10px; }
-  .hero-title { }
   .services-gallery { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .services-section { padding: 70px 30px 60px; }
   .services-header { flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -1402,29 +1369,27 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   .about-editorial-text { font-size: clamp(20px, 5vw, 32px); }
   .about-text-layer { padding: 20px; }
   .about-scroll { height: 250vh; }
-
-  /* Center all buttons & bottom rows on mobile */
   .services-bottom-row { align-items: center; }
   .rooms-bottom-row { align-items: center; justify-content: space-between; }
   .amenities-grid, .amenities-hidden { grid-template-columns: repeat(2, 1fr); }
   .amenities-section { padding: 35px 20px; }
   .amenity-category { padding: 20px 16px; }
   .amenity-item { font-size: 12px; }
-  .amenities-title { font-size: clamp(26px, 6vw, 36px); }
+  .amenities-title { font-size: clamp(22px, 5vw, 28px); }
+  .amenities-label { font-size: 9px; letter-spacing: 0.1em; }
   .services-explore-btn { align-self: center; }
   .rooms-price-tag { align-self: auto; }
   
   footer { padding: 40px 20px 30px; }
-  .footer-inner { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-  .footer-brand { text-align: center; }
+  .footer-inner { grid-template-columns: 1fr; gap: 30px; text-align: left; }
+  .footer-brand { text-align: left; }
   .footer-brand p { max-width: 100%; }
-  .footer-col:nth-child(2) { text-align: center; }
-  .footer-col:nth-child(3) { text-align: center; }
-  .footer-col:nth-child(3) .footer-social { justify-content: center; }
+  .footer-col:nth-child(2) { text-align: left; }
+  .footer-col:nth-child(3) { text-align: left; }
 }
 
 /* ══════════════════════
-   FLOATING STARS ❄ — parallax on scroll
+   FLOATING STARS
    ══════════════════════ */
 .floating-star {
   position: absolute;
@@ -1444,7 +1409,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 .floating-star.muted { color: var(--sand); opacity: 0.3; }
 .floating-star.cream { color: var(--cream); opacity: 0.4; }
 
-/* Stars need relative parent */
 .statement-section,
 .services-section,
 .rooms-section,
@@ -1462,6 +1426,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 }
 .hero-center { animation: heroFadeIn 1.2s ease 0.2s both; }
 .nav-wrapper { animation: navFadeIn 0.8s ease 0.4s both; }
+
 /* ══════════════════════
    COOKIE BANNER & PRIVACY
    ══════════════════════ */
@@ -1517,7 +1482,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;
 }
 .privacy-close:hover { background: var(--olive-deep); }
-
 </style>
 </head>
 <body>
@@ -1537,7 +1501,8 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 <!-- ══════ HERO ══════ -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="hero.jpg" alt="Wherever Hostel">
+    <!-- Placeholder gradient since we don't have the actual image -->
+    <div style="width:100%;height:100%;background:linear-gradient(135deg, #1E1228 0%, #4A3550 30%, #8E4A6E 60%, #C27BA0 80%, #D4A0BC 100%);display:flex;align-items:center;justify-content:center;color:rgba(245,238,242,0.15);font-family:'Cinzel',serif;font-size:14px;letter-spacing:0.3em;">HERO IMAGE</div>
   </div>
   <div class="hero-gradient"></div>
   <div class="hero-center">
@@ -1557,9 +1522,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   </div>
 </section>
 
-
-
-<!-- ══════ SERVICES — Editorial Gallery ══════ -->
+<!-- ══════ SERVICES ══════ -->
 <section class="services-section reveal" id="experience">
   <span class="floating-star cream" data-speed="-0.25" data-rotate="0.8" style="top: 5%; right: 5%; font-size: 14px;">❄︎</span>
   <span class="floating-star cream" data-speed="0.35" data-rotate="-0.6" style="top: 50%; left: 3%; font-size: 20px;">❄︎</span>
@@ -1575,10 +1538,10 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   </div>
 
   <div class="services-gallery">
-    <a href="#aurora" class="service-item" style="text-decoration:none;color:inherit;">
+    <a href="#tours" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>01</span></div>
       <div class="service-img-frame">
-        <img src="service-1.jpg" alt="Aurora Tours">
+        <div style="width:100%;height:100%;background:linear-gradient(180deg,#1a0a2e,#2d1b4e,#4a2060);display:flex;align-items:center;justify-content:center;color:rgba(245,238,242,0.2);font-size:11px;letter-spacing:0.15em;">AURORA TOURS</div>
       </div>
       <div class="service-number-bottom"><span>(AURORA)</span><span><em>tours</em></span></div>
     </a>
@@ -1586,23 +1549,23 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <a href="#rooms" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>02</span></div>
       <div class="service-img-frame">
-        <img src="service-2.webp" alt="Boutique Rooms">
+        <div style="width:100%;height:100%;background:linear-gradient(180deg,#2a1a3a,#4a3550,#6b4a70);display:flex;align-items:center;justify-content:center;color:rgba(245,238,242,0.2);font-size:11px;letter-spacing:0.15em;">ROOMS</div>
       </div>
       <div class="service-number-bottom"><span>(ROOMS)</span><span><em>dormitory</em></span></div>
     </a>
 
-    <a href="#korouma" class="service-item" style="text-decoration:none;color:inherit;">
+    <a href="#tours" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>03</span></div>
       <div class="service-img-frame">
-        <img src="service-3.jpg" alt="Korouma Canyon and Riisitunturi">
+        <div style="width:100%;height:100%;background:linear-gradient(180deg,#1e2a1e,#2a3a2a,#4a5a4a);display:flex;align-items:center;justify-content:center;color:rgba(245,238,242,0.2);font-size:11px;letter-spacing:0.15em;">KOROUMA</div>
       </div>
-      <div class="service-number-bottom"><span>(EXCURSION)</span><span><em>Korouma Canyon & Riisitunturi National Park</em></span></div>
+      <div class="service-number-bottom"><span>(EXCURSION)</span><span><em>Korouma Canyon & Riisitunturi</em></span></div>
     </a>
 
     <a href="#contacts" class="service-item" style="text-decoration:none;color:inherit;">
       <div class="service-number-top"><span>N°</span><span>04</span></div>
       <div class="service-img-frame">
-        <img src="service-4.png" alt="ROWWA Rovaniemi Guide">
+        <div style="width:100%;height:100%;background:linear-gradient(180deg,#1a1a2e,#2a2a4e,#3a3a6e);display:flex;align-items:center;justify-content:center;color:rgba(245,238,242,0.2);font-size:11px;letter-spacing:0.15em;">ROWWA GUIDE</div>
       </div>
       <div class="service-number-bottom"><span>(ROWWA)</span><span><em>guide</em></span></div>
     </a>
@@ -1612,10 +1575,9 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <p class="services-bottom-label">(FEATURED) <em>experiences</em></p>
     <p class="services-bottom-label">( Rovaniemi · Lapland )</p>
   </div>
-
 </section>
 
-<!-- ══════ ROOMS — Editorial Gallery ══════ -->
+<!-- ══════ ROOMS ══════ -->
 <section class="rooms-section" id="rooms">
   <span class="floating-star light" data-speed="0.2" data-rotate="-0.9" style="top: 8%; right: 4%; font-size: 16px;">❄︎</span>
   <span class="floating-star muted" data-speed="-0.3" data-rotate="0.7" style="top: 45%; left: 2%; font-size: 22px;">❄︎</span>
@@ -1633,7 +1595,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="room-item reveal">
       <div class="room-number-top"><span>N°</span><span>01</span></div>
       <div class="room-img-frame">
-        <img src="room-1.jpg" alt="Cozy beds">
+        <div style="width:100%;height:100%;background:var(--cream-warm);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:11px;letter-spacing:0.15em;">ROOM 01</div>
       </div>
       <div class="room-number-bottom"><span>N°</span><span>01</span></div>
     </div>
@@ -1641,7 +1603,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="room-item reveal">
       <div class="room-number-top"><span>N°</span><span>02</span></div>
       <div class="room-img-frame">
-        <img src="room-2.jpg" alt="Room details">
+        <div style="width:100%;height:100%;background:var(--cream-warm);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:11px;letter-spacing:0.15em;">ROOM 02</div>
       </div>
       <div class="room-number-bottom"><span>N°</span><span>02</span></div>
     </div>
@@ -1649,7 +1611,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="room-item reveal">
       <div class="room-number-top"><span>N°</span><span>03</span></div>
       <div class="room-img-frame">
-        <img src="room-3.jpg" alt="Reading corner">
+        <div style="width:100%;height:100%;background:var(--cream-warm);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:11px;letter-spacing:0.15em;">ROOM 03</div>
       </div>
       <div class="room-number-bottom"><span>N°</span><span>03</span></div>
     </div>
@@ -1657,7 +1619,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <div class="room-item reveal">
       <div class="room-number-top"><span>N°</span><span>04</span></div>
       <div class="room-img-frame">
-        <img src="room-4.jpg" alt="Warm linens">
+        <div style="width:100%;height:100%;background:var(--cream-warm);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:11px;letter-spacing:0.15em;">ROOM 04</div>
       </div>
       <div class="room-number-bottom"><span>N°</span><span>04</span></div>
     </div>
@@ -1665,10 +1627,9 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
 
   <div class="rooms-bottom-row">
     <p class="rooms-bottom-label">(DORMITORY) <em>details</em></p>
-    <a href="https://wa.me/358407250551" target="_blank" class="rooms-price-tag" onclick="gtag('event','click_whatsapp',{'button':'rooms_book_direct'})">Book Direct — 5% Off</a>
+    <a href="https://wa.me/358407250551" target="_blank" class="rooms-price-tag">Book Direct — 5% Off</a>
     <p class="rooms-bottom-label">( Netflix · Free WiFi · Fresh Linens · Private Parking · Airport Transfer · Non-Smoking · Heating · Coffee & Tea )</p>
   </div>
-
 </section>
 
 <!-- ══════ AMENITIES ══════ -->
@@ -1680,7 +1641,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     <h2 class="amenities-title">Hostel <em>Amenities</em></h2>
   </div>
 
-  <!-- Visible by default: 4 key categories -->
   <div class="amenities-grid">
     <div class="amenity-category">
       <p class="amenity-category-title">Essentials</p>
@@ -1726,7 +1686,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     </div>
   </div>
 
-  <!-- Hidden: more categories -->
   <div class="amenities-grid amenities-hidden" id="amenitiesMore">
     <div class="amenity-category">
       <p class="amenity-category-title">Food & Drinks</p>
@@ -1780,7 +1739,7 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   </div>
 </section>
 
-<!-- ══════ TOURS — Two-column cards ══════ -->
+<!-- ══════ TOURS ══════ -->
 <section class="tours-section" id="tours">
   <span class="floating-star cream" data-speed="-0.2" data-rotate="0.7" style="top: 8%; right: 6%; font-size: 16px;">❄︎</span>
   <span class="floating-star light" data-speed="0.25" data-rotate="-0.9" style="top: 50%; left: 3%; font-size: 12px;">❄︎</span>
@@ -1794,10 +1753,9 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   </div>
 
   <div class="tours-grid">
-
-    <a href="https://wa.me/358407250551" target="_blank" class="tour-card" id="aurora" onclick="gtag('event','click_whatsapp',{'button':'book_aurora_tour'})">
+    <a href="https://wa.me/358407250551" target="_blank" class="tour-card" id="aurora">
       <div class="tour-card-img">
-        <img src="aurora.jpg" alt="Aurora Borealis">
+        <div style="width:100%;height:100%;background:linear-gradient(180deg,#0a0a2e,#1a1a4e,#2e1a4e,#4a2060);display:flex;align-items:center;justify-content:center;color:rgba(245,238,242,0.15);font-size:11px;letter-spacing:0.15em;">AURORA PHOTO</div>
         <div class="tour-card-number"><span>N°</span><span>01</span></div>
       </div>
       <div class="tour-card-body">
@@ -1810,9 +1768,9 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
       </div>
     </a>
 
-    <a href="https://wa.me/358407250551" target="_blank" class="tour-card" id="korouma" onclick="gtag('event','click_whatsapp',{'button':'book_korouma_tour'})">
+    <a href="https://wa.me/358407250551" target="_blank" class="tour-card" id="korouma">
       <div class="tour-card-img">
-        <img src="service-3.jpg" alt="Korouma Canyon and Riisitunturi">
+        <div style="width:100%;height:100%;background:linear-gradient(180deg,#e8e8e8,#c0c8c0,#8a9a8a,#5a6a5a);display:flex;align-items:center;justify-content:center;color:rgba(30,18,40,0.2);font-size:11px;letter-spacing:0.15em;">KOROUMA PHOTO</div>
         <div class="tour-card-number"><span>N°</span><span>02</span></div>
       </div>
       <div class="tour-card-body">
@@ -1824,7 +1782,6 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
         </div>
       </div>
     </a>
-
   </div>
 </section>
 
@@ -1874,14 +1831,13 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   </div>
 </section>
 
-<!-- ══════ CONTACTS — Dieu Neo style ══════ -->
+<!-- ══════ CONTACTS ══════ -->
 <section class="contacts-section" id="contacts">
   <span class="floating-star" data-speed="0.22" data-rotate="-0.7" style="top: 6%; left: 3%; font-size: 16px;">❄︎</span>
   <span class="floating-star muted" data-speed="-0.18" data-rotate="1.0" style="top: 50%; right: 3%; font-size: 22px;">❄︎</span>
   <span class="floating-star deep" data-speed="0.3" data-rotate="0.5" style="bottom: 8%; left: 10%; font-size: 12px;">❄︎</span>
   <div class="contacts-wrapper reveal">
     <div class="contacts-frame">
-
       <span class="contacts-frame-label">Wherever Hostel</span>
       <div class="contacts-frame-menu">
         <span></span>
@@ -1906,19 +1862,16 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
           <br><br>
           <p class="contacts-col-label">Contact Us</p>
           <div class="contacts-socials">
-            <a href="https://www.instagram.com/whereverhostel" target="_blank" onclick="gtag('event','click_social',{'platform':'instagram'})">Instagram</a>
+            <a href="https://www.instagram.com/whereverhostel" target="_blank">Instagram</a>
             <a href="https://wa.me/358407250551" target="_blank">WhatsApp</a>
-            <a href="https://line.me/ti/p/zAL5X9oQPa" target="_blank" onclick="gtag('event','click_social',{'platform':'line'})">LINE</a>
+            <a href="https://line.me/ti/p/zAL5X9oQPa" target="_blank">LINE</a>
           </div>
         </div>
       </div>
 
       <div class="contacts-map">
-        <a href="https://www.google.com/maps/search/Wherever+Mini+Hostel+Kansankatu+10+Rovaniemi" target="_blank">
-          <img src="map.png" alt="Wherever Mini Hostel on Google Maps">
-        </a>
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Wherever+Mini+Hostel,Kansankatu+10,Rovaniemi,Finland&zoom=16" width="100%" height="100%" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
     </div>
   </div>
 </section>
@@ -1940,8 +1893,8 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   <div class="cta-body">
     <p class="cta-subtext reveal">Your room at the edge of the world is waiting. Book directly for the best rates and a personal welcome from Alisa.</p>
     <div class="cta-buttons">
-      <a href="https://www.booking.com/hotel/fi/wherever-hostel.ru.html?aid=356980&label=gog235jc-10CAsoSEIPd2hlcmV2ZXItaG9zdGVsSAxYA2hIiAEBmAEzuAEHyAEM2AED6AEB-AEBiAIBqAIBuALa4ObMBsACAdICJDRmZWRkOGFiLTA5M2YtNDkyMi04NDc3LWQ2NTU5NjcxMzJkZdgCAeACAQ&sid=3bc8c38e940389d1c182b321bbc88b3f&dist=0&keep_landing=1&sb_price_type=total&type=total&" target="_blank" class="cta-btn" onclick="gtag('event','click_booking',{'button':'cta_booking'})">Book on Booking.com</a>
-      <a href="https://wa.me/358407250551" target="_blank" class="cta-btn" onclick="gtag('event','click_whatsapp',{'button':'cta_book_direct'})">Book Direct — 5% Off</a>
+      <a href="https://www.booking.com/hotel/fi/wherever-hostel.ru.html" target="_blank" class="cta-btn">Book on Booking.com</a>
+      <a href="https://wa.me/358407250551" target="_blank" class="cta-btn">Book Direct — 5% Off</a>
     </div>
   </div>
 </section>
@@ -1977,6 +1930,37 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   </div>
 </footer>
 
+<!-- PRIVACY POLICY MODAL -->
+<div class="privacy-overlay" id="privacyOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="privacy-modal">
+    <h2>Privacy Policy</h2>
+    <p>Last updated: February 2026</p>
+
+    <h3>Who We Are</h3>
+    <p>Wherever Mini Hostel, Kansankatu 10, 96100 Rovaniemi, Finland. Contact: whereverhostel@gmail.com</p>
+
+    <h3>Data We Collect</h3>
+    <p>This website does not collect personal data through forms or account registration. We do not use analytics or tracking tools.</p>
+
+    <h3>Cookies</h3>
+    <p>This website uses Google Analytics to understand how visitors interact with the site. Google Analytics may set cookies for this purpose. No first-party cookies are used for tracking or advertising purposes.</p>
+
+    <h3>Third-Party Services</h3>
+    <p>Google Analytics — used to understand site traffic. Google's privacy policy applies.<br>
+    Google Maps — external link only, opens in a new tab.<br>
+    Booking.com — external link only, no data shared from this site.<br>
+    WhatsApp / LINE — external messaging links, governed by their respective privacy policies.</p>
+
+    <h3>Your Rights (GDPR)</h3>
+    <p>As an EU resident, you have the right to access, correct, or delete any personal data. Since we do not collect personal data through this website, these rights apply to any direct communications (e.g., email or WhatsApp messages) with the hostel.</p>
+
+    <h3>Contact</h3>
+    <p>For any privacy-related questions: whereverhostel@gmail.com</p>
+
+    <button class="privacy-close" onclick="document.getElementById('privacyOverlay').classList.remove('open')">Close</button>
+  </div>
+</div>
+
 <script>
   // ── Reveal ──
   const obs = new IntersectionObserver(entries => {
@@ -2004,13 +1988,11 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     const s = window.scrollY;
 
     if (atHero && s > heroH * 0.1) {
-      // Scrolling down from hero → snap to services
       snapBusy = true;
       atHero = false;
       window.scrollTo({ top: snapTo, behavior: 'smooth' });
       setTimeout(() => { snapBusy = false; }, 1000);
     } else if (!atHero && s < snapTo * 0.3) {
-      // Scrolling up near hero zone → snap back to top
       snapBusy = true;
       atHero = true;
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2044,91 +2026,31 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     });
   });
 
-  // ══════════════════════════════════════
-  // FLOATING STARS ❄ — parallax + rotation on scroll
-  // ══════════════════════════════════════
+  // ── Floating stars parallax ──
   const stars = document.querySelectorAll('.floating-star');
-
   function animateStars() {
     const scrollY = window.scrollY;
-
     stars.forEach(star => {
       const speed = parseFloat(star.dataset.speed) || 0.2;
       const rotateFactor = parseFloat(star.dataset.rotate) || 1;
       const parent = star.parentElement;
       const parentRect = parent.getBoundingClientRect();
-      const parentCenter = parentRect.top + parentRect.height / 2;
       const offset = (scrollY - (parentRect.top + window.scrollY)) * speed * 0.3;
       const rotate = scrollY * rotateFactor * 0.05;
-
       star.style.transform = `translateY(${offset}px) rotate(${rotate}deg)`;
     });
-
     requestAnimationFrame(animateStars);
   }
-
   animateStars();
 
-  // ══════════════════════════════════════
-  // REVEAL ON SCROLL
-  // ══════════════════════════════════════
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Parallax on hero image
+  // ── Hero parallax ──
   window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero-bg img');
+    const heroBg = document.querySelector('.hero-bg div');
     const scroll = window.scrollY;
-    if (hero && scroll < window.innerHeight) {
-      hero.style.transform = `scale(1.05) translateY(${scroll * 0.15}px)`;
+    if (heroBg && scroll < window.innerHeight) {
+      heroBg.style.transform = `scale(1.05) translateY(${scroll * 0.15}px)`;
     }
   }, { passive: true });
-
-</script>
-
-
-
-<!-- PRIVACY POLICY MODAL -->
-<div class="privacy-overlay" id="privacyOverlay" onclick="if(event.target===this)this.classList.remove('open')">
-  <div class="privacy-modal">
-    <h2>Privacy Policy</h2>
-    <p>Last updated: February 2026</p>
-
-    <h3>Who We Are</h3>
-    <p>Wherever Mini Hostel, Kansankatu 10, 96100 Rovaniemi, Finland. Contact: whereverhostel@gmail.com</p>
-
-    <h3>Data We Collect</h3>
-    <p>This website does not collect personal data through forms or account registration. We do not use analytics or tracking tools.</p>
-
-    <h3>Cookies</h3>
-    <p>This website uses Google Analytics to understand how visitors interact with the site. Google Analytics may set cookies for this purpose. No first-party cookies are used for tracking or advertising purposes.</p>
-
-    <h3>Third-Party Services</h3>
-    <p>Google Analytics — used to understand site traffic. Google's privacy policy applies.<br>
-    Google Maps — external link only, opens in a new tab.<br>
-    Booking.com — external link only, no data shared from this site.<br>
-    WhatsApp / LINE — external messaging links, governed by their respective privacy policies.</p>
-
-    <h3>Your Rights (GDPR)</h3>
-    <p>As an EU resident, you have the right to access, correct, or delete any personal data. Since we do not collect personal data through this website, these rights apply to any direct communications (e.g., email or WhatsApp messages) with the hostel.</p>
-
-    <h3>Contact</h3>
-    <p>For any privacy-related questions: whereverhostel@gmail.com</p>
-
-    <button class="privacy-close" onclick="document.getElementById('privacyOverlay').classList.remove('open')">Close</button>
-  </div>
-</div>
-
-<script>
-
 </script>
 
 </body>
