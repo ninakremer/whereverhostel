@@ -983,6 +983,16 @@ a.service-item { display: block; cursor: pointer; }
 }
 .amenities-title em { font-style: italic; }
 
+.amenities-overalls {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
 .amenities-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1180,19 +1190,20 @@ a.service-item { display: block; cursor: pointer; }
 }
 
 .contacts-socials {
-  display: flex; gap: 16px; margin-top: 16px;
+  display: flex; gap: 10px; margin-top: 16px; flex-wrap: nowrap;
 }
 .contacts-socials a {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 12px; font-weight: 500;
-  letter-spacing: 0.1em; text-transform: uppercase;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-dark);
   text-decoration: none;
   border: none;
-  padding: 8px 20px;
+  padding: 6px 14px;
   border: 1px solid var(--border-cream);
   border-radius: 40px;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 .contacts-socials a:hover {
   background: var(--olive-deep);
@@ -1382,9 +1393,10 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   .amenity-item { font-size: 12px; }
   .amenities-title { font-size: clamp(22px, 5vw, 28px); }
   .amenities-label { font-size: 11px; letter-spacing: 0.12em; }
-  .amenities-header { flex-direction: row; align-items: center; margin-bottom: 30px; }
+  .amenities-header { flex-direction: column-reverse; align-items: center; margin-bottom: 20px; gap: 4px; }
   .amenities-header div { margin-bottom: 0; }
-  .amenities-title { font-size: 20px; text-align: right; }
+  .amenities-title { font-size: 26px; text-align: center; }
+  .amenities-overalls { text-align: center; font-size: 12px; margin-bottom: 24px; }
   .services-explore-btn { align-self: center; }
   .rooms-price-tag { align-self: auto; }
   
@@ -1648,6 +1660,8 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
     </div>
     <h2 class="amenities-title">Hostel <em>Amenities</em></h2>
   </div>
+
+  <p class="amenities-overalls">We have warm overalls available for rent for your comfort (10€/day)</p>
 
   <div class="amenities-grid">
     <div class="amenity-category">
