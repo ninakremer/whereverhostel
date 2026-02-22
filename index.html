@@ -1310,7 +1310,10 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   .footer-inner { grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
   .footer-brand p { font-size: 11px; }
   .footer-col a { font-size: 11px; }
-  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .footer-bottom { flex-direction: row; gap: 0; text-align: center; justify-content: space-between; }
+  .footer-bottom p { text-align: left; }
+  .footer-bottom a:first-of-type { text-align: center; }
+  .footer-bottom a:last-of-type { text-align: right; }
   .contacts-grid { grid-template-columns: 1fr; gap: 30px; }
   .contacts-frame { padding: 50px 30px 40px; }
   .contacts-section { padding: 60px 30px; }
@@ -1363,6 +1366,8 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   .cta-section { padding: 60px 24px; }
   .cta-header { flex-direction: column; gap: 8px; align-items: flex-start; }
   .cta-body { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .cta-buttons { width: 100%; justify-content: space-between; flex-wrap: nowrap; gap: 10px; }
+  .cta-btn { padding: 14px 0; flex: 1; text-align: center; font-size: 10px; letter-spacing: 0.1em; }
   .contacts-section { padding: 40px 14px; }
   .contacts-frame { padding: 40px 20px 30px; }
   .contacts-giant-title { font-size: clamp(44px, 10vw, 80px); }
@@ -1376,7 +1381,10 @@ footer { background: var(--olive-deep); color: var(--cream); padding: 60px 50px 
   .amenity-category { padding: 20px 16px; }
   .amenity-item { font-size: 12px; }
   .amenities-title { font-size: clamp(22px, 5vw, 28px); }
-  .amenities-label { font-size: 9px; letter-spacing: 0.1em; }
+  .amenities-label { font-size: 11px; letter-spacing: 0.12em; }
+  .amenities-header { flex-direction: row; align-items: center; margin-bottom: 30px; }
+  .amenities-header div { margin-bottom: 0; }
+  .amenities-title { font-size: 20px; text-align: right; }
   .services-explore-btn { align-self: center; }
   .rooms-price-tag { align-self: auto; }
   
